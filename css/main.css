@@ -1,0 +1,63 @@
+.box {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border: 150px so blueviolet;
+    border-top-color: blue;
+    border-bottom-color: blue;
+}
+
+.clipy {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background-color: chartreuse;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+.transform {
+    display: inline-block;
+    width: 500px;
+    height: 500px;
+    background-color: crimson;
+    transform: translateX(200px);
+    transition: 1s;
+}
+
+.transform:hover {
+    transform: rotate(60deg);
+}
+
+.animation {
+    display: inline-block;
+    width: 500px;
+    height: 500px;
+    transition: 1s;
+    background-color: rgb(219, 75, 99);
+    animation-name: changePosition;
+    animation-direction: alternate;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+@keyframes changePosition {
+    0% {
+        transform: translateY(0);
+        background-color: orange;
+    }
+    20% {
+        transform: translateY(50px);
+        background-color: orangered;
+    }
+    80% {
+        transform: translateY(50px);
+        background-color: yellow;
+    }
+    100% {
+        transform: translateY(0);
+        scale: 2;
+        background-color: rgb(255, 0, 128);
+    }
+}
